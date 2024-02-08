@@ -12,6 +12,15 @@ import plotly.express as px
 
 app = FastAPI()
 
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+def read_root():
+    return {"Hello": "World"}
+
+
 
 @app.get('/name-alcaldia')
 def get_name_alcaldia():
