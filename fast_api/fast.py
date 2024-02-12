@@ -6,6 +6,7 @@ import os
 import requests
 import json
 from fastapi import FastAPI
+from fastapi import HTTPException
 from google.cloud import storage
 from io import BytesIO
 import plotly.express as px
