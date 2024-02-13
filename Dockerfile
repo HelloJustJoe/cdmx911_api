@@ -1,5 +1,7 @@
 # Using python:3.10-bookworm as the base image
-FROM python:3.10-bookworm
+#FROM python:3.10-bookworm
+#trialling with slim version for faster build
+FROM python:3.10-slim-buster
 
 # Set the working directory inside the container to /prod
 WORKDIR /prod
@@ -21,4 +23,4 @@ ENV PORT=8000
 EXPOSE $PORT
 
 # Define the command to run the FastAPI application
-CMD uvicorn fast_api.fast:app --host 0.0.0.0 --port $PORT
+CMD ["sh", "-c", "uvicorn fast_api.fast:app --host 0.0.0.0 --port ${PORT}"]
