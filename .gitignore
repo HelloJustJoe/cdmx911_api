@@ -9,6 +9,10 @@ __pycache__/
 # C extensions
 *.so
 
+# ignore json keys
+cdmx911-model-and-data-f3cd7070f2e8.json
+lewagon-bootcamp-404323-0e75ccfb660b.json
+
 # Distribution / packaging
 .Python
 build/
